@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/routes.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({Key key}) : super(key: key);
@@ -15,11 +16,15 @@ class SecondScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(Routes.THIRD);
+              },
               child: Text('Go to Third Screen ->'),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(Routes.FOURTH);
+              },
               child: Text('Go to Fourth Screen ->'),
             ),
           ],
